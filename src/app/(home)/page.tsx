@@ -3,12 +3,22 @@ import {
   FaceSmileIcon,
   ListBulletIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
+
+import iconImg from "@/images/icon.png";
 
 import { Card } from "./components/Card";
 
 export default function Page() {
   return (
-    <main className="flex items-center justify-center p-4">
+    <main className="flex flex-col items-center justify-center gap-20 p-4">
+      <Image
+        src={iconImg}
+        alt="Playground"
+        className="size-[256px]"
+        priority
+      />
+
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <Card
           href="/to-do"

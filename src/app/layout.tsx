@@ -16,10 +16,14 @@ export const metadata: Metadata = {
   description: "Hand-crafted tech examples",
   generator: "Next.js",
   applicationName: "Playground",
-  keywords: ["Next.js, Playground, JavaScript"],
+  keywords: ["Playground", "Next.js", "Zustand", "React Email", "Media Pipe"],
   authors: { name: "Dubinin Maksim", url: "https://anothergosu.dev" },
   creator: "Dubinin Maksim",
   publisher: "Dubinin Maksim",
+  openGraph: {
+    siteName: "Playground",
+    url: "https://playground-teamgosu.vercel.app",
+  },
 };
 
 export default function RootLayout({
