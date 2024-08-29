@@ -1,4 +1,5 @@
 import {
+  DocumentTextIcon,
   EnvelopeIcon,
   FaceSmileIcon,
   ListBulletIcon,
@@ -32,6 +33,13 @@ export default function Page() {
           title="Email Template"
           description="Email template built with React Email"
           icon={<EnvelopeIcon />}
+        />
+
+        <Card
+          href="/pdf"
+          title="PDF"
+          description="PDF document built with React-pdf"
+          icon={<DocumentTextIcon />}
         />
 
         <Card

@@ -28,15 +28,11 @@ export const Preview = () => {
 
       <Hr className="my-2" />
 
-      <Items items={items} />
+      <Items />
 
       <Hr className="my-2" />
 
-      <Accounting
-        items={items}
-        tax="10.50"
-        shipping="5.99"
-      />
+      <Accounting />
 
       <Hr className="my-2" />
 
@@ -50,9 +46,3 @@ export const Preview = () => {
     </Container>
   );
 };
-
-const items = [
-  { name: "Classic Denim Jacket", quantity: 1, price: "49.99" },
-  { name: "Red Flannel Shirt", quantity: 2, price: "25.00" },
-  { name: "Black Skinny Jeans", quantity: 1, price: "39.99" },
-];
