@@ -1,12 +1,10 @@
 import { Column, Heading, Row, Section } from "@react-email/components";
 
+import { EMAIL_ITEMS } from "@/constants/common";
+
 import { formatPrice } from "@/lib";
 
-interface ItemsProps {
-  items: Array<{ name: string; quantity: number; price: string }>;
-}
-
-export const Items = ({ items }: ItemsProps) => {
+export const Items = () => {
   return (
     <>
       <Heading
@@ -26,7 +24,7 @@ export const Items = ({ items }: ItemsProps) => {
           </Column>
         </Row>
 
-        {items.map(({ name, quantity, price }, idx) => {
+        {EMAIL_ITEMS.map(({ name, quantity, price }, idx) => {
           const total = formatPrice(Number(price) * quantity);
 
           return (

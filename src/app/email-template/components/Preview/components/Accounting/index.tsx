@@ -1,18 +1,15 @@
 import { Column, Row, Section } from "@react-email/components";
 
+import { EMAIL_ITEMS } from "@/constants/common";
+
 import { formatPrice } from "@/lib";
 
-interface AccountingProps {
-  items: Array<{ name: string; quantity: number; price: string }>;
-  tax: string;
-  shipping: string;
-}
-
-export const Accounting = ({ items, tax, shipping }: AccountingProps) => {
-  const subtotal = items.reduce((prev, curr) => {
+export const Accounting = () => {
+  const subtotal = EMAIL_ITEMS.reduce((prev, curr) => {
     return (prev += Number(curr.price) * curr.quantity);
   }, 0);
-
+  const tax = "10.50";
+  const shipping = "5.99";
   const total = subtotal + Number(tax) + Number(shipping);
 
   return (
